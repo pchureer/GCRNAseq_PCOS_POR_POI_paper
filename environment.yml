@@ -1,0 +1,15 @@
+name: gc_rnaseq
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - trimmomatic
+  - star
+  - r-base=4.3
+  - bioconductor-edger
+  - r-ggplot2
+  - r-pheatmap
+  - r-ggvenn
+
+
