@@ -1,18 +1,18 @@
-#GCRNAseq_PCOS_POR_POI_paper
+##### GCRNAseq_PCOS_POR_POI_paper
 This repository contains scripts to reproduce the analyses from "Granulosa Cell RNA-seq Reveals Overlapping and Unique Differential Expression Signatures in PCOS, POR, and POI Using Pooled vs. Matched Controls"
 
 Prerequisites
 
-1. Clone the repo
+### 1. Clone the repo
 git clone https://github.com/yourusername/GCRNAseq_PCOS_POR_POI_paper.git
 
 cd GCRNAseq_PCOS_POR_POI_paper
 
-3. Install Conda environment
+### 2. Install Conda environment
 conda env create -f environment.yml
 conda activate gc_rnaseq
 
-4. Directory layout
+### 4. Directory layout
 ├── data/                  # Reference files
 │   ├── adapters.fa
 │   ├── OpenTargets_PCOS.csv
