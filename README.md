@@ -13,7 +13,7 @@ conda env create -f environment.yml
 
 conda activate gc_rnaseq
 
-### 4. Directory layout
+### 3. Directory layout
 ├── data/                  # Reference files
 │   ├── adapters.fa
 │   ├── OpenTargets_PCOS.csv
@@ -29,40 +29,41 @@ conda activate gc_rnaseq
     ├── 05_intersection/
     └── 06_enrichment/
     
-5. Script templates
-4.1. Trim adapters & align reads
-Script: scripts/01_preprocessing/01_trim_and_align.sh
-Purpose: Remove adapters, filter low-quality bases, and align to GRCh38 with STAR, producing sorted BAM and gene counts.
+### Script templates
 
-bash scripts/01_preprocessing/01_trim_and_align.sh \
-  SRR10239199 \
-  data/fastq/SRR10239199_R1.fq.gz \
-  data/fastq/SRR10239199_R2.fq.gz
+### 4.1. Trim adapters & align reads
+    Script: scripts/01_preprocessing/01_trim_and_align.sh
+    Purpose: Remove adapters, filter low-quality bases, and align to GRCh38 with STAR, producing sorted BAM and gene counts.
+    
+## bash scripts/01_preprocessing/01_trim_and_align.sh \
+        SRR10239199 \
+        data/fastq/SRR10239199_R1.fq.gz \
+        data/fastq/SRR10239199_R2.fq.gz
 
-Args:
-    Sample ID (e.g. SRR10239199)
-    R1 FASTQ path
-    R2 FASTQ path
+## Args:
+        Sample ID (e.g. SRR10239199)
+        R1 FASTQ path
+        R2 FASTQ path
 
-Outputs (in results/SRR10239199/):
-    SRR10239199_R1_paired.fq.gz and _R2_paired.fq.gz
-    SRR10239199.Aligned.sortedByCoord.out.bam
-    ReadsPerGene.out.tab (raw gene counts)
+## Outputs (in results/SRR10239199/):
+        SRR10239199_R1_paired.fq.gz and _R2_paired.fq.gz
+        SRR10239199.Aligned.sortedByCoord.out.bam
+        ReadsPerGene.out.tab (raw gene counts)
 
-4.2. Differential expression with edgeR
-Script: scripts/02_dge/02_edgeR_DE.R
-Purpose: Normalize counts, model batch + group, and identify DE genes.
+### 4.2. Differential expression with edgeR
+    Script: scripts/02_dge/02_edgeR_DE.R
+    Purpose: Normalize counts, model batch + group, and identify DE genes.
 
-Rscript scripts/02_dge/02_edgeR_DE.R \
-  results/counts_matrix.csv \
-  results/metadata.csv \
-  results/DE_results_PCOS_pooled.csv
+##   Rscript scripts/02_dge/02_edgeR_DE.R \
+      results/counts_matrix.csv \
+      results/metadata.csv \
+      results/DE_results_PCOS_pooled.csv
 
-Inputs:
+## Inputs:
     counts_matrix.csv: genes × samples raw counts (from all ReadsPerGene.out.tab files).
     metadata.csv: sample metadata (sampleID, group, batch).
 
-Output:
+## Output:
     DE_results_*.csv: table with gene, log2FC, PValue, FDR for each contrast.
 
 4.3. Venn diagrams of DE gene intersections
