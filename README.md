@@ -14,6 +14,7 @@ conda env create -f environment.yml
 conda activate gc_rnaseq
 
 ### 3. Directory layout
+
 ├── data/                  # Reference files
 │   ├── adapters.fa
 │   ├── OpenTargets_PCOS.csv
@@ -35,17 +36,17 @@ conda activate gc_rnaseq
     Script: scripts/01_preprocessing/01_trim_and_align.sh
     Purpose: Remove adapters, filter low-quality bases, and align to GRCh38 with STAR, producing sorted BAM and gene counts.
     
-## bash scripts/01_preprocessing/01_trim_and_align.sh \
+# bash scripts/01_preprocessing/01_trim_and_align.sh \
         SRR10239199 \
         data/fastq/SRR10239199_R1.fq.gz \
         data/fastq/SRR10239199_R2.fq.gz
 
-## Args:
+# Args:
         Sample ID (e.g. SRR10239199)
         R1 FASTQ path
         R2 FASTQ path
 
-## Outputs (in results/SRR10239199/):
+# Outputs (in results/SRR10239199/):
         SRR10239199_R1_paired.fq.gz and _R2_paired.fq.gz
         SRR10239199.Aligned.sortedByCoord.out.bam
         ReadsPerGene.out.tab (raw gene counts)
