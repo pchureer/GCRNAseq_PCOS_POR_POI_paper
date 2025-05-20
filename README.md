@@ -1,17 +1,18 @@
-# GCRNAseq_PCOS_POR_POI_paper
+#GCRNAseq_PCOS_POR_POI_paper
 This repository contains scripts to reproduce the analyses from "Granulosa Cell RNA-seq Reveals Overlapping and Unique Differential Expression Signatures in PCOS, POR, and POI Using Pooled vs. Matched Controls"
 
 Prerequisites
 
 1. Clone the repo
 git clone https://github.com/yourusername/GCRNAseq_PCOS_POR_POI_paper.git
+
 cd GCRNAseq_PCOS_POR_POI_paper
 
-2. Install Conda environment
+3. Install Conda environment
 conda env create -f environment.yml
 conda activate gc_rnaseq
 
-3. Directory layout
+4. Directory layout
 ├── data/                  # Reference files
 │   ├── adapters.fa
 │   ├── OpenTargets_PCOS.csv
@@ -27,7 +28,7 @@ conda activate gc_rnaseq
     ├── 05_intersection/
     └── 06_enrichment/
     
-4. Script templates
+5. Script templates
 4.1. Trim adapters & align reads
 Script: scripts/01_preprocessing/01_trim_and_align.sh
 Purpose: Remove adapters, filter low-quality bases, and align to GRCh38 with STAR, producing sorted BAM and gene counts.
