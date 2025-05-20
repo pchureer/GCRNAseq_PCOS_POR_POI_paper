@@ -15,20 +15,20 @@ conda activate gc_rnaseq
 
 ### 3. Directory layout
 
-├── data/                  # Reference files
-│   ├── adapters.fa
-│   ├── OpenTargets_PCOS.csv
-│   ├── OpenTargets_OvarianDysfunction.csv
-│   └── OpenTargets_POI.csv
-├── results/               # Outputs of each step
-├── figures/               # Plots generated
-└── scripts/
-    ├── 01_preprocessing/
-    ├── 02_dge/
-    ├── 03_venn/
-    ├── 04_heatmap/
-    ├── 05_intersection/
-    └── 06_enrichment/
+    ├── data/                  # Reference files
+    │   ├── adapters.fa
+    │   ├── OpenTargets_PCOS.csv
+    │   ├── OpenTargets_OvarianDysfunction.csv
+    │   └── OpenTargets_POI.csv
+    ├── results/               # Outputs of each step
+    ├── figures/               # Plots generated
+    └── scripts/
+        ├── 01_preprocessing/
+        ├── 02_dge/
+        ├── 03_venn/
+        ├── 04_heatmap/
+        ├── 05_intersection/
+        └── 06_enrichment/
     
 ### Script templates
 
