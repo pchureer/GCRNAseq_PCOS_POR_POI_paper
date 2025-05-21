@@ -72,17 +72,17 @@ conda activate gc_rnaseq
 - DE_results_*.csv: table with gene, log2FC, PValue, FDR for each contrast.
 
 ### 4.3. Venn diagrams of DE gene intersections
-    - Script: scripts/03_venn/03_plot_venn.R
-    - Purpose: Show overlap of significant genes across phenotypes.
-
-    - Rscript scripts/03_venn/03_plot_venn.R \
+**Script**: scripts/03_venn/03_plot_venn.R
+**Purpose**: Show overlap of significant genes across phenotypes.
+```bash
+    Rscript scripts/03_venn/03_plot_venn.R \
         results/DE_results_PCOS_pooled.csv \
         results/DE_results_POR_pooled.csv \
         results/DE_results_POI_pooled.csv \
         figures/venn_pooled.png
-
-    - Inputs: three DE result CSVs (pooled-control contrasts).
-    - Output: venn_pooled.png illustrating shared/unique genes.
+```
+**Inputs**: three DE result CSVs (pooled-control contrasts).
+**Output**: venn_pooled.png illustrating shared/unique genes.
 
 ### 4.4. Heatmap of core 17-gene signature
     - Script: scripts/04_heatmap/04_plot_heatmap.R
