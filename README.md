@@ -37,7 +37,7 @@ conda activate gc_rnaseq
 
 **Purpose**: Remove adapters, filter low-quality bases, and align to GRCh38 with STAR, producing sorted BAM and gene counts.
     
-        bash scripts/01_preprocessing/01_trim_and_align.sh \
+    bash scripts/01_preprocessing/01_trim_and_align.sh \
         SRR10239199 \
         data/fastq/SRR10239199_R1.fq.gz \
         data/fastq/SRR10239199_R2.fq.gz
