@@ -118,19 +118,21 @@ conda activate gc_rnaseq
         figures/jaccard_heatmap.png
 ```
 **Outputs:**
-        intersect_count_heatmap.png: absolute overlaps.
-        jaccard_heatmap.png: normalized similarities.
+- intersect_count_heatmap.png: absolute overlaps.
+- jaccard_heatmap.png: normalized similarities.
 
 ### 4.6. Text enrichment (GO terms word-cloud)
-    - Script: scripts/06_enrichment/06_text_enrichment.R
-    - Purpose: Generate word-clouds of significantly enriched GO Biological Process terms.
+**Script:** scripts/06_enrichment/06_text_enrichment.R
 
-    - Rscript scripts/06_enrichment/06_text_enrichment.R \
+**Purpose:** Generate word-clouds of significantly enriched GO Biological Process terms.
+```bash
+    Rscript scripts/06_enrichment/06_text_enrichment.R \
         results/GO_enrichment_PCOS_pooled.csv \
         figures/PCOS_pooled_wordcloud.png
+```
+**Input:** GO enrichment CSV (term, Count, FDR).
 
-    - Input: GO enrichment CSV (term, Count, FDR).
-    - Output: PCOS_pooled_wordcloud.png.
+**Output:** PCOS_pooled_wordcloud.png.
 
 ## Cite us: 
 
