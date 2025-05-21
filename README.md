@@ -50,9 +50,9 @@ conda activate gc_rnaseq
 - R2 FASTQ path
     
 **Outputs (in results/SRR10239199/):**
-- SRR10239199_R1_paired.fq.gz and _R2_paired.fq.gz
-- SRR10239199.Aligned.sortedByCoord.out.bam
-- ReadsPerGene.out.tab (raw gene counts)
+- `SRR10239199_R1_paired.fq.gz` and `_R2_paired.fq.gz`
+- `SRR10239199.Aligned.sortedByCoord.out.bam`
+- `ReadsPerGene.out.tab` (raw gene counts)
 
 ### 4.2. Differential expression with edgeR
 **Script:** scripts/02_dge/02_edgeR_DE.R
@@ -82,9 +82,9 @@ conda activate gc_rnaseq
         results/DE_results_POI_pooled.csv \
         figures/venn_pooled.png
 ```
-**Inputs:** three DE result CSVs (pooled-control contrasts).
+**Inputs:** `three DE result CSVs` (pooled-control contrasts).
 
-**Output:** venn_pooled.png illustrating shared/unique genes.
+**Output:** `venn_pooled.png` illustrating shared/unique genes.
 
 ### 4.4. Heatmap of core 17-gene signature
 **Script:** scripts/04_heatmap/04_plot_heatmap.R
@@ -95,9 +95,9 @@ conda activate gc_rnaseq
         results/log2FC_17core.csv \
         figures/core17_heatmap.png
 ```
-**Input:** log2FC_17core.csv (rows = genes, columns = contrasts).
+**Input:** `log2FC_17core.csv` (rows = genes, columns = contrasts).
 
-**Output:** core17_heatmap.png.
+**Output:** `core17_heatmap.png.`
 
 ### 4.5. Intersection-count & Jaccard similarity heatmaps
 **Script:** scripts/05_intersection/05_intersection_heatmap_jaccard.R
@@ -130,9 +130,9 @@ conda activate gc_rnaseq
         results/GO_enrichment_PCOS_pooled.csv \
         figures/PCOS_pooled_wordcloud.png
 ```
-**Input:** GO enrichment CSV (term, Count, FDR).
+**Input:** `GO enrichment CSV` (term, Count, FDR).
 
-**Output:** PCOS_pooled_wordcloud.png.
+**Output:** `PCOS_pooled_wordcloud.png.`
 
 ## Cite us: 
 
