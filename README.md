@@ -44,12 +44,12 @@ conda activate gc_rnaseq
         data/fastq/SRR10239199_R1.fq.gz \
         data/fastq/SRR10239199_R2.fq.gz
 ```
-    Args:
+    **Args**:
         Sample ID (e.g. SRR10239199)
         R1 FASTQ path
         R2 FASTQ path
 
-    Outputs (in results/SRR10239199/):
+    **Outputs (in results/SRR10239199/)**:
         SRR10239199_R1_paired.fq.gz and _R2_paired.fq.gz
         SRR10239199.Aligned.sortedByCoord.out.bam
         ReadsPerGene.out.tab (raw gene counts)
