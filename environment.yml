@@ -10,6 +10,10 @@ dependencies:
   - bioconductor-edger
   - r-ggplot2
   - r-pheatmap
-  - r-ggvenn
+  - r-ggVennDiagram
+  - r-ggwordcloud
+  - r-stringr
+  - r-edgeR
+  - r-umap
 
 
