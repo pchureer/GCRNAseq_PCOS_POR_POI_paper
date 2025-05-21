@@ -97,7 +97,7 @@ conda activate gc_rnaseq
 ```
 **Input:** `log2FC_17core.csv` (rows = genes, columns = contrasts).
 
-**Output:** `core17_heatmap.png.`
+**Output:** `core17_heatmap.png`
 
 ### 4.5. Intersection-count & Jaccard similarity heatmaps
 **Script:** scripts/05_intersection/05_intersection_heatmap_jaccard.R
@@ -132,7 +132,7 @@ conda activate gc_rnaseq
 ```
 **Input:** `GO enrichment CSV` (term, Count, FDR).
 
-**Output:** `PCOS_pooled_wordcloud.png.`
+**Output:** `PCOS_pooled_wordcloud.png`
 
 ## Cite us: 
 
