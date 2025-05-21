@@ -100,10 +100,11 @@ conda activate gc_rnaseq
 **Output:** core17_heatmap.png.
 
 ### 4.5. Intersection-count & Jaccard similarity heatmaps
-    - Script: scripts/05_intersection/05_intersection_heatmap_jaccard.R
-    - Purpose: Compare your DE sets (six contrasts) against Open Targets reference lists.
+**Script:** scripts/05_intersection/05_intersection_heatmap_jaccard.R
 
-    - Rscript scripts/05_intersection/05_intersection_heatmap_jaccard.R \
+**Purpose:** Compare your DE sets (six contrasts) against Open Targets reference lists.
+```bash
+    Rscript scripts/05_intersection/05_intersection_heatmap_jaccard.R \
         results/DE_results_PCOS_pooled.csv \
         results/DE_results_PCOS_matched.csv \
         results/DE_results_POR_pooled.csv \
@@ -115,8 +116,8 @@ conda activate gc_rnaseq
         data/OpenTargets_POI.csv \
         figures/intersect_count_heatmap.png \
         figures/jaccard_heatmap.png
-
-    - Outputs:
+```
+**Outputs:**
         intersect_count_heatmap.png: absolute overlaps.
         jaccard_heatmap.png: normalized similarities.
 
