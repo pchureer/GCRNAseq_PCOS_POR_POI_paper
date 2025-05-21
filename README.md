@@ -34,6 +34,7 @@ conda activate gc_rnaseq
 
 ### 4.1. Trim adapters & align reads
 **Script**: scripts/01_preprocessing/01_trim_and_align.sh
+
 **Purpose**: Remove adapters, filter low-quality bases, and align to GRCh38 with STAR, producing sorted BAM and gene counts.
     
         bash scripts/01_preprocessing/01_trim_and_align.sh \
