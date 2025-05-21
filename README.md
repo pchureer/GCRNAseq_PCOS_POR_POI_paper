@@ -35,9 +35,9 @@ conda activate gc_rnaseq
 #### Script templates
 
 ### 4.1. Trim adapters & align reads
-**Script**: scripts/01_preprocessing/01_trim_and_align.sh
+**Script:** scripts/01_preprocessing/01_trim_and_align.sh
 
-**Purpose**: Remove adapters, filter low-quality bases, and align to GRCh38 with STAR, producing sorted BAM and gene counts.
+**Purpose:** Remove adapters, filter low-quality bases, and align to GRCh38 with STAR, producing sorted BAM and gene counts.
 ```bash
     bash scripts/01_preprocessing/01_trim_and_align.sh \
         SRR10239199 \
@@ -55,9 +55,9 @@ conda activate gc_rnaseq
 - ReadsPerGene.out.tab (raw gene counts)
 
 ### 4.2. Differential expression with edgeR
-**Script**: scripts/02_dge/02_edgeR_DE.R
+**Script:** scripts/02_dge/02_edgeR_DE.R
 
-**Purpose**: Normalize counts, model batch + group, and identify DE genes.
+**Purpose:** Normalize counts, model batch + group, and identify DE genes.
 ```bash
     Rscript scripts/02_dge/02_edgeR_DE.R \
           results/counts_matrix.csv \
@@ -72,9 +72,9 @@ conda activate gc_rnaseq
 - DE_results_*.csv: table with gene, log2FC, PValue, FDR for each contrast.
 
 ### 4.3. Venn diagrams of DE gene intersections
-**Script**: scripts/03_venn/03_plot_venn.R
+**Script:** scripts/03_venn/03_plot_venn.R
 
-**Purpose**: Show overlap of significant genes across phenotypes.
+**Purpose:** Show overlap of significant genes across phenotypes.
 ```bash
     Rscript scripts/03_venn/03_plot_venn.R \
         results/DE_results_PCOS_pooled.csv \
@@ -82,20 +82,22 @@ conda activate gc_rnaseq
         results/DE_results_POI_pooled.csv \
         figures/venn_pooled.png
 ```
-**Inputs**: three DE result CSVs (pooled-control contrasts).
+**Inputs:** three DE result CSVs (pooled-control contrasts).
 
-**Output**: venn_pooled.png illustrating shared/unique genes.
+**Output:** venn_pooled.png illustrating shared/unique genes.
 
 ### 4.4. Heatmap of core 17-gene signature
-    - Script: scripts/04_heatmap/04_plot_heatmap.R
-    - Purpose: Visualize log₂FC of the 17 shared signature genes across all six contrasts.
+**Script:** scripts/04_heatmap/04_plot_heatmap.R
 
-    - Rscript scripts/04_heatmap/04_plot_heatmap.R \
+**Purpose:** Visualize log₂FC of the 17 shared signature genes across all six contrasts.
+```bash
+    Rscript scripts/04_heatmap/04_plot_heatmap.R \
         results/log2FC_17core.csv \
         figures/core17_heatmap.png
+```
+**Input:** log2FC_17core.csv (rows = genes, columns = contrasts).
 
-    - Input: log2FC_17core.csv (rows = genes, columns = contrasts).
-    - Output: core17_heatmap.png.
+**Output:** core17_heatmap.png.
 
 ### 4.5. Intersection-count & Jaccard similarity heatmaps
     - Script: scripts/05_intersection/05_intersection_heatmap_jaccard.R
