@@ -10,10 +10,11 @@ git clone https://github.com/yourusername/GCRNAseq_PCOS_POR_POI_paper.git
 cd GCRNAseq_PCOS_POR_POI_paper
 ```
 ### 2. Install Conda environment
+```bash
 conda env create -f environment.yml
 
 conda activate gc_rnaseq
-
+```
 ### 3. Directory layout
 
     ├── data/                  # Reference files
