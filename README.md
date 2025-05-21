@@ -65,7 +65,7 @@ conda activate gc_rnaseq
           results/DE_results_PCOS_pooled.csv
 ```
 **Inputs:**
-- counts_matrix.csv: genes × samples raw counts (from all ReadsPerGene.out.tab files).
+- `counts_matrix.csv`: genes × samples raw counts (from all ReadsPerGene.out.tab files).
 - metadata.csv: sample metadata (sampleID, group, batch).
 
 **Output:**
