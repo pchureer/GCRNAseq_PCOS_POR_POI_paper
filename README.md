@@ -45,7 +45,7 @@ conda activate gc_rnaseq
         data/fastq/SRR10239199_R2.fq.gz
 ```
 **Args:**
-- Sample ID (e.g. SRR10239199)
+- `Sample ID` (e.g. SRR10239199)
 - R1 FASTQ path
 - R2 FASTQ path
     
@@ -66,10 +66,10 @@ conda activate gc_rnaseq
 ```
 **Inputs:**
 - `counts_matrix.csv`: genes × samples raw counts (from all ReadsPerGene.out.tab files).
-- metadata.csv: sample metadata (sampleID, group, batch).
+- `metadata.csv`: sample metadata (sampleID, group, batch).
 
 **Output:**
-- DE_results_*.csv: table with gene, log2FC, PValue, FDR for each contrast.
+- `DE_results_*.csv`: table with gene, log2FC, PValue, FDR for each contrast.
 
 ### 4.3. Venn diagrams of DE gene intersections
 **Script:** scripts/03_venn/03_plot_venn.R
@@ -118,8 +118,8 @@ conda activate gc_rnaseq
         figures/jaccard_heatmap.png
 ```
 **Outputs:**
-- intersect_count_heatmap.png: absolute overlaps.
-- jaccard_heatmap.png: normalized similarities.
+- `intersect_count_heatmap.png`: absolute overlaps.
+- `jaccard_heatmap.png`: normalized similarities.
 
 ### 4.6. Text enrichment (GO terms word-cloud)
 **Script:** scripts/06_enrichment/06_text_enrichment.R
