@@ -4,10 +4,11 @@
 ### Prerequisites
 
 ### 1. Clone the repo
+```bash
 git clone https://github.com/yourusername/GCRNAseq_PCOS_POR_POI_paper.git
 
 cd GCRNAseq_PCOS_POR_POI_paper
-
+```
 ### 2. Install Conda environment
 conda env create -f environment.yml
 
