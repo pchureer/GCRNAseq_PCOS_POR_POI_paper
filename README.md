@@ -58,18 +58,18 @@ conda activate gc_rnaseq
 **Script**: scripts/02_dge/02_edgeR_DE.R
 
 **Purpose**: Normalize counts, model batch + group, and identify DE genes.
-
+```bash
     Rscript scripts/02_dge/02_edgeR_DE.R \
           results/counts_matrix.csv \
           results/metadata.csv \
           results/DE_results_PCOS_pooled.csv
+```
+**Inputs:**
+- counts_matrix.csv: genes × samples raw counts (from all ReadsPerGene.out.tab files).
+- metadata.csv: sample metadata (sampleID, group, batch).
 
-    Inputs:
-        counts_matrix.csv: genes × samples raw counts (from all ReadsPerGene.out.tab files).
-        metadata.csv: sample metadata (sampleID, group, batch).
-
-    Output:
-        DE_results_*.csv: table with gene, log2FC, PValue, FDR for each contrast.
+**Output:**
+- DE_results_*.csv: table with gene, log2FC, PValue, FDR for each contrast.
 
 ### 4.3. Venn diagrams of DE gene intersections
     - Script: scripts/03_venn/03_plot_venn.R
