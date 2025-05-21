@@ -30,7 +30,7 @@ conda activate gc_rnaseq
         ├── 05_intersection/
         └── 06_enrichment/
     
-### Script templates
+#### Script templates
 
 ### 4.1. Trim adapters & align reads
 **Script**: scripts/01_preprocessing/01_trim_and_align.sh
@@ -53,19 +53,20 @@ conda activate gc_rnaseq
         ReadsPerGene.out.tab (raw gene counts)
 
 ### 4.2. Differential expression with edgeR
-    - Script: scripts/02_dge/02_edgeR_DE.R
-    - Purpose: Normalize counts, model batch + group, and identify DE genes.
+**Script**: scripts/02_dge/02_edgeR_DE.R
 
-    - Rscript scripts/02_dge/02_edgeR_DE.R \
+**Purpose**: Normalize counts, model batch + group, and identify DE genes.
+
+    Rscript scripts/02_dge/02_edgeR_DE.R \
           results/counts_matrix.csv \
           results/metadata.csv \
           results/DE_results_PCOS_pooled.csv
 
-    - Inputs:
+    Inputs:
         counts_matrix.csv: genes × samples raw counts (from all ReadsPerGene.out.tab files).
         metadata.csv: sample metadata (sampleID, group, batch).
 
-    - Output:
+    Output:
         DE_results_*.csv: table with gene, log2FC, PValue, FDR for each contrast.
 
 ### 4.3. Venn diagrams of DE gene intersections
