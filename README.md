@@ -73,6 +73,7 @@ conda activate gc_rnaseq
 
 ### 4.3. Venn diagrams of DE gene intersections
 **Script**: scripts/03_venn/03_plot_venn.R
+
 **Purpose**: Show overlap of significant genes across phenotypes.
 ```bash
     Rscript scripts/03_venn/03_plot_venn.R \
@@ -82,6 +83,7 @@ conda activate gc_rnaseq
         figures/venn_pooled.png
 ```
 **Inputs**: three DE result CSVs (pooled-control contrasts).
+
 **Output**: venn_pooled.png illustrating shared/unique genes.
 
 ### 4.4. Heatmap of core 17-gene signature
