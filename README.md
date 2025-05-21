@@ -45,13 +45,14 @@ conda activate gc_rnaseq
         data/fastq/SRR10239199_R2.fq.gz
 ```
     Args:
-    Sample ID (e.g. SRR10239199)
-    R1 FASTQ path
-    R2 FASTQ path
+        Sample ID (e.g. SRR10239199)
+        R1 FASTQ path
+        R2 FASTQ path
+    
     Outputs (in results/SRR10239199/):
-    SRR10239199_R1_paired.fq.gz and _R2_paired.fq.gz
-    SRR10239199.Aligned.sortedByCoord.out.bam
-    ReadsPerGene.out.tab (raw gene counts)
+        SRR10239199_R1_paired.fq.gz and _R2_paired.fq.gz
+        SRR10239199.Aligned.sortedByCoord.out.bam
+        ReadsPerGene.out.tab (raw gene counts)
 
 ### 4.2. Differential expression with edgeR
 **Script**: scripts/02_dge/02_edgeR_DE.R
