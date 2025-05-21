@@ -5,6 +5,8 @@ channels:
   - defaults
 dependencies:
   - trimmomatic
+  - fastqc
+  - axel
   - star
   - r-base=4.3
   - bioconductor-edger
@@ -15,5 +17,3 @@ dependencies:
   - r-stringr
   - r-edgeR
   - r-umap
-
-
